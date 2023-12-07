@@ -30,7 +30,6 @@ const CreateDoc = () => {
       getFiles(pasta)
         .then((value) => setFiles(value))
         .finally(() => setLoading2(false));
-      console.log(files + " no create doc omponente");
     }
   }, [folders, pasta]);
   return (
