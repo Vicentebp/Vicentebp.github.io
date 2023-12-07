@@ -1,0 +1,52 @@
+.createDocWrapper {
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+}
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  font-size: large;
+  font-weight: 500;
+  color: #c7a0cb;
+  input {
+    width: 100%;
+    font-size: large;
+    font-weight: 500;
+    color: #c7a0cb;
+    box-sizing: border-box;
+    outline: none;
+    border: 2px solid #c7a0cb;
+    border-radius: 12px;
+    padding: 8px;
+    transition: all 150ms ease-in;
+  }
+  :focus {
+    outline: 2px solid #c7a0cb;
+  }
+  input[type="submit"] {
+    background-color: transparent;
+  }
+}
+.labelWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.folderContainer {
+  display: flex;
+  flex-direction: column;
+}
+.fontSpan {
+  font-size: large;
+  font-weight: 500;
+  color: #c7a0cb;
+}
+.btn {
+  background: none;
+  border: none;
+  text-align: start;
+}

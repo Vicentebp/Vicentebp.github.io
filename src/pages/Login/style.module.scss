@@ -1,0 +1,246 @@
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+.initialScreen {
+  display: flex;
+  height: 100%;
+  align-items: start;
+  flex-direction: column;
+  justify-content: start;
+
+  @include desktop {
+    align-items: center;
+  }
+}
+
+.initialContent {
+  width: 100%;
+  height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+
+  @include desktop {
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: large;
+    font-weight: 500;
+    color: #c7a0cb;
+
+    @include desktop {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 52px;
+      margin-bottom: 30px;
+    }
+  }
+
+  button {
+    width: 100%;
+    height: 44px;
+
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    margin: 18px 0 8px 0;
+    max-width: 400px;
+    transition: all 0.2s;
+    font-size: large;
+    font-weight: 600;
+    background-color: #c7a0cb;
+    @include desktop {
+      margin-bottom: 20px;
+    }
+  }
+
+  span {
+    cursor: pointer;
+    margin-bottom: 32px;
+    color: #c7a0cb;
+    font-weight: 500;
+  }
+}
+
+.coralLogo {
+  color: #17494d;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.backBtn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #1b4b66;
+  border: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #c7a0cb;
+  outline: none;
+  transition: all 0.2s;
+
+  @include desktop {
+    width: 50px;
+    height: 50px;
+    top: 50px;
+    left: 50px;
+    background-color: #c7a0cb;
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: #e390ec;
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include desktop {
+    max-width: 800px;
+  }
+
+  img {
+    border-radius: 50%;
+    width: 100px;
+    margin-bottom: 20px;
+
+    @include desktop {
+      width: 200px;
+    }
+  }
+}
+
+.profilePhoto {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+
+  @include desktop {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.form {
+  display: flex;
+  row-gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  @include desktop {
+    gap: 20px;
+  }
+
+  button {
+    border: none;
+    background-color: #c7a0cb;
+    color: #fff;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 328px;
+    height: 52px;
+    margin-top: 30px;
+    transition: all 0.3s;
+    font-size: large;
+    font-weight: 600;
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+      background-color: #e390ec;
+    }
+  }
+}
+
+.inputContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+
+  @include desktop {
+    gap: 16px;
+    flex-direction: row;
+  }
+}
+
+.inputField {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+
+  input {
+    color: white;
+    background-color: transparent;
+    border-radius: 18px;
+
+    border: solid 2px #c7a0cb;
+    outline: none;
+    height: 52px;
+    transition: all 0.3s;
+    padding-left: 10px;
+
+    &:focus {
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  svg {
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    right: 10px;
+    position: absolute;
+    color: #1b4b66;
+    cursor: pointer;
+
+    @include desktop {
+      top: 25px;
+    }
+  }
+}
+
+.changeType {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+
+  span {
+    color: #1b4b66;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
