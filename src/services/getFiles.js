@@ -7,9 +7,10 @@ export const getFiles = async (pasta) => {
   await listAll(listRef)
     .then((res) => {
       res.items.forEach((itemRef) => {
-        getDownloadURL(itemRef).then((value) => {
-          fileList.push({ fileName: itemRef.name, fileUrl: `${value}` });
-        });
+        // getDownloadURL(itemRef).then((value) => {
+        //   fileList.push({ fileName: itemRef.name, fileUrl: `${value}` });
+        // });
+        fileList.push({ fileName: itemRef.name });
       });
     })
     .catch((error) => {
